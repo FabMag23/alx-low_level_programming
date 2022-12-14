@@ -1,23 +1,36 @@
 #include <stdio.h>
 /**
  * main - main block
- * Description: Print combination of two digit numbers
+ * Description: Print all possible different combinations
+ * of the digits
  * Return: 0
  */
 int main(void)
 {
-int tens;
-int ones;
-for (tens = 0; tens <= 9; tens++)
+int i;
+int n;
+int j;
+for (i = 48; i < 58; i++)
 {
-for (ones = tens + 1; ones <= 9; ones++)
+for (n = 48; n < 58; n++)
 {
-putchar(tens + '0');
-putchar(ones + '0');
-if (tens < 8)
+if (n > i)
 {
+for (j = 48; j < 58; j++)
+{
+if (j > n)
+{
+putchar(i);
+putchar(n);
+putchar(j);
+if (i == 55 && n == 56 && j == 57)
+{
+break;
+}
 putchar(',');
 putchar(' ');
+}
+}
 }
 }
 }
