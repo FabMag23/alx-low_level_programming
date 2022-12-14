@@ -1,19 +1,24 @@
 #include <stdio.h>
 /**
  * main - main block
- * Description: print all possible combinations of single digit numbers
+ * Description: Print combination of two digit numbers
  * Return: 0
  */
 int main(void)
 {
-int num;
-for (num = 0; num <= 9; num++)
+int tens;
+int ones;
+for (tens = 0; tens <= 9; tens++)
 {
-putchar(num + '0');
-if (num < 9)
+for (ones = tens + 1; ones <= 9; ones++)
+{
+putchar(tens + '0');
+putchar(ones + '0');
+if (tens < 8)
 {
 putchar(',');
 putchar(' ');
+}
 }
 }
 putchar('\n');
