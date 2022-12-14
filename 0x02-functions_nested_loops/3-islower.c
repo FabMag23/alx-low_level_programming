@@ -1,20 +1,17 @@
-#include "holberton.h"
+#include "main.h"
 /**
- * _islower - Entry point
- * Description: checks is a character is lowercase
- * @c: the integer value it receives
- * Return: 1 if true. 0 if false.
+ * main - check the code.
+ * Return: Always 0.
  */
-int _islower(int c)
+int main(void)
 {
-int i = 'a';
-for (i = 'a'; i <= 'z'; i++)
-{
-/* refer int c*/
-if (c == i)
-{
-return (1);
-}
-}
+int r;
+r = _islower('H');
+_putchar(r + '0');
+r = _islower('o');
+_putchar(r + '0');
+r = _islower(108);
+_putchar(r + '0');
+_putchar('\n');
 return (0);
 }
